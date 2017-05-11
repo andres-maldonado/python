@@ -1,0 +1,17 @@
+* Static Files
+
+
+* Media Files :
+
+  TEMPLATES = [
+              'context_processors': [
+                  'django.template.context_processors.media',
+  ]
+  Context processors in templates to render {{MEDIA_URL}}
+  
+  
+    STATIC_URL = '/static/'
+    MEDIA_URL = '/media/'
+    STATIC_ROOT = 'project/static'
+    MEDIA_ROOT = 'project/static/media'
+    STATICFILES_DIRS = ['project/static',]
