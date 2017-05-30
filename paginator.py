@@ -17,4 +17,4 @@ def view(request):
 	elif max_index - 2 <= index :
 		start_index = -5
 	page_range = paginator.page_range[start_index:end_index] # New page range
-	return render(request, 'blog_view.html', {'article': article,'page_range': page_range,})
+	return render(request, 'thisView.html', {'article': article,'page_range': page_range,})
