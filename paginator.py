@@ -1,6 +1,6 @@
 def view(request):
-  queryset = this.objects.exclude(publish='no').order_by("-publication_date")
-  page = request.GET.get('page', 1)
+	queryset = this.objects.exclude(publish='no').order_by("-publication_date"
+	page = request.GET.get('page', 1)
 	paginator = Paginator(queryset, 1)
 	try:
 		article = paginator.page(page)
