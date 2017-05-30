@@ -18,3 +18,30 @@ def view(request):
 		start_index = -5
 	page_range = paginator.page_range[start_index:end_index] # New page range
 	return render(request, 'thisView.html', {'article': article,'page_range': page_range,})
+
+
+HTML
+							       
+<!--PAGINATION-->
+{% if this.has_next or this.has_previous %}
+<div class="prev_next">
+{% if this.has_previous %}
+<a class="prev btn btn-info" href="?page={{this.previous_page_number}}">Prev</a>
+{% endif %}
+{% if this.has_next %}
+<a class="next btn btn-info" href="?page={{this.next_page_number}}">Next</a>
+{% endif %}
+<div class="pages">
+<ul>
+{% for pg in page_range %}
+{% if this.number == pg %}
+<li><a href="?page={{pg}}" class="btn btn-default">{{pg}}CURRENT</a></li>
+{% else %}
+<li><a href="?page={{pg}}" class="btn">{{pg}}</a></li>
+{% endif %}
+{% endfor %}
+</ul>
+</div>
+<span class="clear_both"></span>
+</div>
+{% endif %} 
