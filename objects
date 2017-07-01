@@ -1,0 +1,18 @@
+#OBJECT CREATION
+
+#Object + individual property 
+    lcl = Object()
+    lcl.service = "Services"
+    lcl.blog = "Blog"
+    lcl.price = "Prix"
+    lcl.portfolio = "Portfolio"
+    lcl.contact = "Contact"
+
+#Object like dict
+		lcl = {
+			"service" : "Services YEAH",
+			"blog" : "ISOD",
+			"price" : "DF",
+			"portfolio" : "iqsud",
+			"contact" : "isqod",
+		}
