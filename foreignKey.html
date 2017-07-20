@@ -1,0 +1,18 @@
+THE MODEL NAME WHIT THE FOREIGN KEY NO CAPITALIZE + _set.all
+
+models.py
+
+class TituloNoticia(models.Model):
+	title_news = models.ForeignKey(Noticia)
+  ...
+
+html
+		{% for this in this.titulonoticia_set.all %}
+			<h2>{{this.title_news.title}}</h2>
+			<p>{{this.paragraph_one}}</p>
+			{% if this.paragraph_two %}
+			<p>{{this.paragraph_two}}</p>
+			{% elif this.paragraph_three %}
+			<p>{{this.paragraph_three}}</p>
+			{% endif %}
+		{% endfor %}
