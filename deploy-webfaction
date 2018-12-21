@@ -1,2 +1,10 @@
 Python 3 => MySQL Problem
+
+"""
+APP PATH = demo_the_suite
+APP NAME = Pillow
+"""
+ 
+PYTHONPATH=$HOME/webapps/demo_the_suite/lib/python3.7 easy_install-3.7 --install-dir=$HOME/webapps/demo_the_suite/lib/python3.7 --script-dir=$HOME/webapps/demo_the_suite/bin Pillow
+
 best, PostgreSQL, install whit PIP -> python3.6 -m pip install Pillow
