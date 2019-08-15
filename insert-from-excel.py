@@ -7,12 +7,6 @@ goc_my_obj(table, **kwargs):
    main_query = 'SELECT * FROM {table} WHERE {query}'.format(table=table, query=query)
 
 
-
-SELECT column1, column2, ...
-FROM table_name
-WHERE condition;
-
-
 import csv
 import io
 
