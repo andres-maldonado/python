@@ -1,15 +1,20 @@
 ### OBJECT
 
 class persona:
-    def __init__(self, *args, **kwargs):
-        self.nombre = args[0]
-        self.apellido = args[1]
+    def __init__(self, name, last_name, *args, **kwargs):
+        self.nombre = name
+        self.apellido = last_name
         for key, value in kwargs.items():
             setattr(self, key, value)
     def __str__(self):
         return self.nombre
 
-a = persona('Nombre', 'Apellido', **{extras})
+class mujer(persona):
+    def __init__(self, name, last_name, *args, **kwargs):
+        super().__init__(name, last_name, *args, **kwargs)
+        self.sexo = 'femenino'
+
+a = mujer('Nombre', 'Apellido', **{extras})
 
 
 
