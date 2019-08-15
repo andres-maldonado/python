@@ -1,3 +1,18 @@
+### GET OR CREATE MANUAL
+goc_my_obj(table, **kwargs):
+    query = ''
+    for key, value in kwargs.items():
+        query += '{}={};'.format(key, value)
+
+   main_query = 'SELECT * FROM {table} WHERE {query}'.format(table=table, query=query)
+
+
+
+SELECT column1, column2, ...
+FROM table_name
+WHERE condition;
+
+
 import csv
 import io
 
