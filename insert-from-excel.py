@@ -1,4 +1,6 @@
 ### GET OR CREATE MANUAL
+goc_my_obj('TABLE_NAME', **{'Id': 1, 'Name': 'asd'})
+
 goc_my_obj(table, **kwargs):
     query = ''
     for key, value in kwargs.items():
