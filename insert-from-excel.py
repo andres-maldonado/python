@@ -1,3 +1,19 @@
+### OBJECT
+
+class persona:
+    def __init__(self, *args, **kwargs):
+        self.nombre = args[0]
+        self.apellido = args[1]
+        for key, value in kwargs.items():
+            setattr(self, key, value)
+    def __str__(self):
+        return self.nombre
+
+a = persona('Nombre', 'Apellido', **{extras})
+
+
+
+
 ### GET OR CREATE MANUAL
 goc_my_obj('TABLE_NAME', **{'Id': 1, 'Name': 'asd'})
 
