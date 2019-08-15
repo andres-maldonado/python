@@ -3,8 +3,13 @@ goc_my_obj(table, **kwargs):
     query = ''
     for key, value in kwargs.items():
         query += '{}={};'.format(key, value)
-
-   main_query = 'SELECT * FROM {table} WHERE {query}'.format(table=table, query=query)
+    
+    main_query = 'SELECT * FROM {table} WHERE {query}'.format(table=table, query=query)
+    
+    try:
+        executor(main_query)
+    except:
+        create_in_db(table, query)
 
 
 import csv
