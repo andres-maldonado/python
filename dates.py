@@ -21,3 +21,7 @@ my_time_utc = localized.astimezone(pytz.utc) # se convierte en UTC, my_time_utc 
 ##############
 my_time = datetime.now() 
 my_time_utc = pytz.timezone(TIME_ZONE).localize(my_time).astimezone(pytz.utc)
+
+
+# UTC to Localtime
+local_time = my_time_utc.astimezone(pytz.timezone(TIME_ZONE))
